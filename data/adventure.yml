@@ -2,7 +2,7 @@ title: Adventures in Rust
 author: J. Cliff Dyer
 locations:
   - id: 0
-    text: You are writing your first Rust program.  Do you choose to:
+    text: "You are writing your first Rust program.  Do you choose to:"
     actions:
       - text: rewrite it in Python
         target: 1
@@ -30,6 +30,7 @@ locations:
         target: 0
   - id: 4
     text: The borrow checker complains again.  How do you respond?
+    actions:
       - text: Add some lifetime annotations.
         target: 5
       - text: Run clippy
@@ -64,7 +65,7 @@ locations:
   - id: 8
     text: The code compiles!  You have successfully written a Rust program, but you find the language a little confusing.  Maybe it will be easier next time.
   - id: 9
-    text: Clippy spits out a number of suggestions that help you understand not only what isn't working, but how you could write your code more idiomatically.  After reading the suggestions, you understand why your code wasn't working 
+    text: Clippy spits out a number of suggestions that help you understand not only what isn't working, but how you could write your code more idiomatically.  After reading the suggestions, you understand why your code wasn't working.
     actions:
       - text: Compile it again.
         target: 11
