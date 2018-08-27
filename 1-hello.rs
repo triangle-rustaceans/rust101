@@ -5,6 +5,7 @@ fn main() {
     hello0();
     hello1();
     hello2();
+    broken();
     println!("{}", hello3(format!("Cardenio")));
     println!("{}", hello4(format!("Dulcinea")));
 }
@@ -38,11 +39,11 @@ fn hello3(input: String) -> String {
 // /// This function is broken because we try to use name after we have already passed
 // /// ownership of `name` to `hello3`.  We can fix it by allocating a new String, or by
 // /// returning ownership of the original String.
-// fn broken() {
-//     let name = "Cardenio";
-//     println!(hello2(name));
-//     println!("We greeted {}", name);
-// }
+fn broken() {
+    let name = "Cardenio".to_string();
+    println!("{}", hello3(name.clone()));
+    println!("We greeted {}", name);
+}
 
 /// Strings are growable vectors of valid UTF-8 bytes.  The data they contain
 /// lives on the heap.  They can be allocated, modified, grown, and shrunk.

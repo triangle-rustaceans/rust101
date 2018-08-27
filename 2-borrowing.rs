@@ -35,18 +35,20 @@ fn hello5(input: &String) -> String {
 /// same time, but only if we are not mutating the object during the lifetime
 /// of the references.
 fn hello_both(input1: &String, input2: &String) -> String {
-    format!("Hello {} and {}!", input1, input2)
+    let mut x = format!("Hello {} and {}!", input1, input2);
+    let y = &mut x;
+    println!("{}", y);
 }
 
 // /// The following fails to compile because it tries to modify the same object
 // /// it is taking a reference to while the reference is alive:
-// fn modify_self() {
-//     let mut s = format!("Giants");
-//     let giants = &s;
-//     s.clear();
-//     s.push_str("Just windmills");
-//     println!("{}", giants);
-// }
+fn modify_self() {
+    let mut s = format!("Giants");
+    let giants = &s;
+    s.clear();
+    s.push_str("Just windmills");
+    println!("{}", giants);
+}
 
 /// &str is a reference to a string slice.  It consists of a pointer to
 /// existing string data, either in a String object, or baked into the

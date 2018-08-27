@@ -1,10 +1,9 @@
-/*
+ 
 enum Option<T> {
     Some(T),
     None,
 }
 
-*/
 
 fn map() {
     let chivalrous_deeds = Some(1000);

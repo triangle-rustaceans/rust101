@@ -21,7 +21,8 @@
     },
     {
       "id": 1,
-      "text": "You continue to live your ordinary life.  You have babies, grow old, and die."
+      "text": "You continue to live your ordinary life.  You have babies, grow old, and die.",
+      "success": false
     },
     {
       "id": 2,
@@ -146,7 +147,8 @@
     },
     {
       "id": 8,
-      "text": "The code compiles!  You have successfully written a Rust program, but you find the language a little confusing.  Maybe it will be easier next time."
+      "text": "The code compiles!  You have successfully written a Rust program, but you find the language a little confusing.  Maybe it will be easier next time.",
+      "success": true
     },
     {
       "id": 9,
@@ -166,15 +168,18 @@
     },
     {
       "id": 10,
-      "text": "You have been eaten by a wild segmentation fault."
+      "text": "You have been eaten by a wild segmentation fault.",
+      "success": false
     },
     {
       "id": 11,
-      "text": "The code compiles!  The program runs blazingly fast, and uses clean and idiomatic rust. You go out and tell all your friends that they should rewrite all their code in Rust."
+      "text": "The code compiles!  The program runs blazingly fast, and uses clean and idiomatic rust. You go out and tell all your friends that they should rewrite all their code in Rust.",
+      "success": false
     },
     {
       "id": 12,
-      "text": "The code compiles!  You think you could probably make it faster without all the .clone() calls around your code, but hey! it's still faster than Python."
+      "text": "The code compiles!  You think you could probably make it faster without all the .clone() calls around your code, but hey! it's still faster than Python.",
+      "success": false
     }
   ]
 }

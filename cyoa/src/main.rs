@@ -4,7 +4,6 @@ extern crate serde;
 extern crate serde_json;
 
 
-use serde_json::Value;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::stdin;
@@ -37,7 +36,7 @@ fn page(cyoa: &cyoa::CYOA, index: u64) -> Option<u64> {
     let location = cyoa.locations.get((index) as usize)?;
     println!("\n{}", location.text);
     let action_vec = match location.actions {
-        Some(ref v) => if v.len() == 0 { return None } else { v },
+        Some(ref v) => if v.is_empty() { return None } else { v },
         None => return None,
     };
     println!();

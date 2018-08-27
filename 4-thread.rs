@@ -1,6 +1,7 @@
 use std::sync::{Arc, Mutex, mpsc};
 use std::thread;
 
+
 fn main() {
     let x = Arc::new(Mutex::new(0));
     let x1 = x.clone();
