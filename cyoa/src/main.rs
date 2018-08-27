@@ -43,8 +43,8 @@ fn page(cyoa: &cyoa::CYOA, index: u64) -> Option<u64> {
     };
     println!();
     let mut i = 1;
-    for action in action_vec {
-        println!("{}) {} ({})", i, action.text, action.label);
+    for async in action_vec {
+        println!("{}) {} ({})", i, async.text, async.label);
         i += 1;
     }
     let mut choice = String::with_capacity(64);
