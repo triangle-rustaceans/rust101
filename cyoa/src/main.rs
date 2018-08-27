@@ -1,6 +1,8 @@
-#[macro_use] extern crate serde_derive;
+#![feature(rust_2018_preview, uniform_paths)]
+
 extern crate clap;
 extern crate serde;
+#[macro_use] extern crate serde_derive;
 extern crate serde_json;
 
 
